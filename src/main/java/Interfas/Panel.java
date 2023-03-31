@@ -17,6 +17,7 @@ public class Panel extends JPanel {
     JMenuItem opcionAzar;
     JMenuItem opcionOrdenar;
 
+     public  int altura;
 
     public Panel() {
         this.setSize(600,400);
