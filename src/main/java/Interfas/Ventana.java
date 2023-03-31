@@ -10,7 +10,7 @@ public class Ventana extends JFrame {
     public Ventana(){
         this.setSize(600,400);
         this.setLocationRelativeTo(null);
-        this.setBackground(Color.blue);
+        this.setBackground(Color.white);
        this. setTitle("                                                             cubo");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 

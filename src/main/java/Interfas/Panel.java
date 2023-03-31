@@ -16,6 +16,7 @@ public class Panel extends JPanel {
     JMenuItem opcionEliminar;
     JMenuItem opcionAzar;
     JMenuItem opcionOrdenar;
+    private  int separacion  = 20 ;
 
      public  int altura;
 
@@ -29,7 +30,11 @@ public class Panel extends JPanel {
         menuAreglo();
         this.add(menu);
 
+
     }
+
+
+
     private  void menuArchivo(){
         columana1  = new JMenu("Menu Archivo");
         reseteo();
@@ -66,9 +71,14 @@ public class Panel extends JPanel {
         opcionAgregar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                altura  =   Integer.parseInt(JOptionPane.showInputDialog("ingres la altura deseada"))  ;
 
+                Graphics g = getGraphics();
+                g.setColor(Color.RED);
 
+                g.fillRect(separacion , 325-altura, 4, altura);
+                separacion  += 20;
 
             }
         });
@@ -87,9 +97,11 @@ public class Panel extends JPanel {
         columana2.add(opcionEliminar);
     }
 
-
-
-
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Dibujo d = new Dibujo();
+        d.suelo(g,0,325);
+    }
 
 
 
