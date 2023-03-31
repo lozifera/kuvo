@@ -14,10 +14,8 @@ public class Ventana extends JFrame {
        this. setTitle("                                                             cubo");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-
-
-
          panel1 = new Panel();
+
         this.add(panel1);
 
 

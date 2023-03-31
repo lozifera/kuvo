@@ -17,25 +17,16 @@ public class Panel extends JPanel {
     JMenuItem opcionAzar;
     JMenuItem opcionOrdenar;
 
-  private int altura;
-
 
     public Panel() {
         this.setSize(600,400);
         setBackground(Color.black);
-
         menu = new JMenuBar();
         menu.setBackground(Color.GRAY);
         menu.setBounds(0,0,600,25);
-
-
         menuArchivo();
         menuAreglo();
-
         this.add(menu);
-
-
-
 
     }
     private  void menuArchivo(){
@@ -51,6 +42,12 @@ public class Panel extends JPanel {
     private  void  exit (){
         opcionSalir = new JMenuItem(" Salir");
         menu.add(columana1);
+        opcionSalir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(WIDTH);
+            }
+        });
     }
     private  void  menuAreglo(){
         columana2 = new JMenu("Menu Areglo");
